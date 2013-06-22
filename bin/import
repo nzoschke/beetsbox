@@ -1,6 +1,11 @@
 #!/bin/bash
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
+export BEETSDIR=$ROOT_DIR
+
+[ ! -d "$1" ] && { echo usage: $0 MUSIC_DIR; exit 1; }
 
 # Import a path without auto-tagging
-export BEETSDIR=$(pwd)
+# TODO: import paths as specified in config file
 rm $BEETSDIR/musiclibrary.blb
-beet import -A ~/Music
+beet import --noautotag --nocopy --nowrite "$1"
