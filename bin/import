@@ -1,0 +1,6 @@
+#!/bin/bash
+set -x
+
+# Import a path without auto-tagging
+export BEETSDIR=$(pwd)
+beet import -A ~/Music
