@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Import a path without auto-tagging
+export BEETSDIR=$(pwd)
+beet list $@
