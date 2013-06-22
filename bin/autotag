@@ -5,5 +5,5 @@ export BEETSDIR=$ROOT_DIR
 
 [ ! -d "$1" ] && { echo usage: $0 ALBUM_DIR; exit 1; }
 
-# Run autotagger and write metadata back to a path
+# Write updates to files: autotag, embedart
 beet import --autotag --nocopy --write "$1"

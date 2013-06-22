@@ -1,5 +1,6 @@
 directory: music/
-library: musiclibrary.blb
 import:
     copy: no
     write: no
+plugins: embedart fetchart
+library: musiclibrary.blb
