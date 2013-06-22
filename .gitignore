@@ -1,2 +1,4 @@
 *.pyc
+musiclibrary.blb
+state.pickle
 venv/
