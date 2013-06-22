@@ -1,0 +1,9 @@
+#!/bin/bash
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
+export BEETSDIR=$ROOT_DIR
+
+[ ! -d "$1" ] && { echo usage: $0 ALBUM_DIR; exit 1; }
+
+# Run autotagger and write metadata back to a path
+beet import --autotag --nocopy --write "$1"
