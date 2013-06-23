@@ -6,6 +6,5 @@ export BEETSDIR=$ROOT_DIR
 [ ! -d "$1" ] && { echo usage: $0 MUSIC_DIR; exit 1; }
 
 # Import a path without auto-tagging
-# TODO: import paths as specified in config file
-rm $BEETSDIR/musiclibrary.blb
+#rm $BEETSDIR/musiclibrary.blb
 beet import --noautotag --nocopy --nowrite "$1"
