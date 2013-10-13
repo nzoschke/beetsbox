@@ -1,0 +1,6 @@
+#!/bin/bash
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
+export BEETSDIR=$ROOT_DIR
+
+beet ls -f '"${path}"' $@ | xargs qlmanage -p
